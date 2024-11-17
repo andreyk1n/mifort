@@ -4,9 +4,24 @@
     z-index: 100;
     width: 100%;
     position: fixed;
+    padding: 15px 0;
     top: 0;
     left: 0;
     transition: top $transitionDuration;
+    background-color: #ffffffbd;
+    backdrop-filter: blur(3px);
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 15px;
+        width: 100%;
+    }
+
+    &__logo {
+        z-index: 10;
+    }
 
     &__nav {
         width: 100%;
@@ -14,22 +29,45 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 15px;
+        flex-wrap: wrap;
+        gap: 10px;
 
-        @media (max-width: 768px) {
+        @media (max-width: 992px) {
+            flex-wrap: nowrap;
+            max-width: 100%;
             position: absolute;
-            right: -100%; 
+            right: -100%;
             top: 0;
             flex-direction: column;
             gap: 25px;
             align-items: center;
             justify-content: center;
             width: 100%;
-            min-height: 100vh; 
-            background-color: #ffffff;
-            transition-duration: $transitionDuration;
+            height: 100vh;
+            overflow-y: auto;
+            background-color: rgba(255, 255, 255, 0.86);
+            backdrop-filter: blur(3px);
+            transition-duration: 0.5s;
+            scroll-padding-top: 50px;
+            scroll-padding-bottom: 50px;
+
+            a:first-child {
+                padding-top: 100px;
+            }
+
+            a:last-child {
+                padding-bottom: 50px;
+            }
+
+            a {
+                font-size: 20px;
+            }
         }
-    
+
+        @media (max-height: 500px) {
+            justify-content: flex-start;
+        }
+
         &.active {
             right: 0; // Коли активне, меню буде видно
         }
@@ -39,7 +77,7 @@
         display: none;
     }
 
-    @media (max-width:768px) {
+    @media (max-width:992px) {
         &__burger {
             min-width: 20px;
             width: 40px;
@@ -50,7 +88,7 @@
             cursor: pointer;
             position: relative;
             z-index: 11;
-        
+
             span {
                 display: block;
                 width: 100%;
@@ -58,7 +96,7 @@
                 background-color: $buttonBgColor;
                 position: relative;
                 transition-duration: $transitionDuration;
-        
+
                 &::before,
                 &::after {
                     content: "";
@@ -68,27 +106,27 @@
                     background-color: $buttonBgColor;
                     transition-duration: $transitionDuration;
                 }
-        
+
                 &::before {
-                    top: -10px; 
+                    top: -10px;
                 }
-        
+
                 &::after {
-                    top: 10px; 
+                    top: 10px;
                 }
             }
-    
+
             &.active span {
-                background-color: transparent; 
-        
+                background-color: transparent;
+
                 &::before {
                     top: 0;
-                    transform: rotate(45deg); 
+                    transform: rotate(45deg);
                 }
-        
+
                 &::after {
                     top: 0;
-                    transform: rotate(-45deg); 
+                    transform: rotate(-45deg);
                 }
             }
         }

@@ -19,6 +19,13 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+// temp
+
+p {
+    margin-top: 100px;
 }
 
 @font-face {
@@ -68,6 +75,11 @@ body {
     background-color: $bgColor;
     overflow-x: hidden;
 }
+
+.no-scroll {
+    overflow: hidden;
+}
+
 
 .wrapper {
     display: flex;
@@ -121,10 +133,12 @@ a:active {
     cursor: pointer;
     border: 0;
     outline: 0;
+    font-weight: 600;
+    font-family: "Poppins", serif;
 }
 
 .button:hover {
-    background-color: $buttonHover;
+    opacity: .5;
 }
 
 .button:active {
