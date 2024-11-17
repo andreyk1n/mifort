@@ -1,0 +1,135 @@
+@use 'mixins' as *;
+
+.footer {
+    background-color: #1377FE;
+    width: 100%;
+    padding-top: 80px;
+    color: #fff;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        align-items: flex-start;
+        padding: 0 15px 80px 15px !important;
+
+        @media (max-width: 768px) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__infos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        width: 480px;
+
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+
+        @media (max-width: 576px) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__link {
+        color: #fff;
+
+        &:hover {
+            text-decoration: underline;
+            color: #fff;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+        span {
+            @include adaptiveValue('font-size', 24px, 20px);
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+            color: #fff;
+        }
+    }
+
+    &__list {
+        list-style: none;
+        margin-top: 30px;
+        font-size: 18px;
+
+        span {
+            position: relative;
+            color: #fff;
+            margin-bottom: 30px;
+
+
+            &:before {
+                content: '';
+                width: 14px;
+                height: 16px;
+                position: absolute;
+                top: 2px;
+                left: -20px;
+                background-image: url('data:image/svg+xml,<svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.8028 5.22927C12.9747 1.62341 9.79606 0 7.00394 0C7.00394 0 7.00394 0 6.99606 0C4.21182 0 1.02534 1.61561 0.197166 5.22146C-0.725653 9.24878 1.76675 12.6595 4.02253 14.8059C4.85859 15.6019 5.93126 16 7.00394 16C8.07662 16 9.1493 15.6019 9.97747 14.8059C12.2333 12.6595 14.7257 9.25659 13.8028 5.22927ZM7.00394 9.13951C5.63155 9.13951 4.51943 8.03902 4.51943 6.68098C4.51943 5.32293 5.63155 4.22244 7.00394 4.22244C8.37634 4.22244 9.48846 5.32293 9.48846 6.68098C9.48846 8.03902 8.37634 9.13951 7.00394 9.13951Z" fill="white"/></svg>');
+            }
+        }
+    }
+
+    &__form {
+        @include adaptiveValue('width', 530px, 380px);
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 30px;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        span {
+            @include adaptiveValue('font-size', 24px, 20px);
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+        }
+
+        &-field {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            input,
+            textarea {
+                padding: 20px;
+                border-radius: 16px;
+                outline: 0;
+                border: 0;
+                font-size: 18px;
+                background-color: rgba(217, 217, 217, 0.2);
+                color: #fff;
+
+                &::placeholder {
+                    color: #fff;
+                }
+            }
+        }
+
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+    }
+
+    &__copyright {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0;
+        background-color: #2d87fc;
+    }
+}

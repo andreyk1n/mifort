@@ -1,4 +1,60 @@
-<footer>
-    <p>Підвал сайту &copy; 2024</p>
-  </footer>
-  
+<footer class="footer">
+  <div class="footer__container">
+    <div class="footer__infos">
+      <div class="footer__location">
+        <a href="index.html" class="footer__logo">
+          <img src="images/icons/footer_logo.svg" alt="Header logo">
+        </a>
+        <ul class="footer__list">
+          <li><span>Headquarters:</span></li>
+          <li><a class="footer__link" href="#">Tallinn</a></li>
+          <li><a class="footer__link" href="#">Estonia</a></li>
+        </ul>
+        <ul class="footer__list">
+          <li><span>Office</span></li>
+          <li><a class="footer__link" href="#">UK</a></li>
+          <li><a class="footer__link" href="#">Netherlands</a></li>
+          <li><a class="footer__link" href="#">Georgia</a></li>
+          <li><a class="footer__link" href="#">Kazakhstan</a></li>
+        </ul>
+      </div>
+      <div class="footer__nav">
+        <span>Navigations</span>
+        <a href="#" class="footer__link">Home</a>
+        <a href="#" class="footer__link">About Us</a>
+        <a href="#" class="footer__link">FAQs</a>
+        <a href="#" class="footer__link">Blogs</a>
+        <a href="#" class="footer__link">Contact</a>
+        <a href="#" class="footer__link">Privecy Policy</a>
+      </div>
+    </div>
+
+    <div class="footer__form">
+      <span>Contact Us</span>
+      <p>Let's start a conversation and see how we can help you achieve your goals</p>
+      <form action="POST">
+        <div class="footer__form-field">
+          <label for="name" class="footer__form-label">Name</label>
+          <input type="text" id="name" name="name" class="footer__form-input" placeholder="Enter your name" required>
+        </div>
+        <div class="footer__form-field">
+          <label for="email" class="footer__form-label">Email</label>
+          <input type="email" id="email" name="email" class="footer__form-input" placeholder="Enter your email"
+            required>
+        </div>
+        <div class="footer__form-field">
+          <label for="phone" class="footer__form-label">Phone</label>
+          <input type="tel" id="phone" name="phone" class="footer__form-input" placeholder="Enter your phone number"
+            required>
+        </div>
+        <div class="footer__form-field">
+          <label for="message" class="footer__form-label">Message</label>
+          <textarea id="message" name="message" class="footer__form-textarea" placeholder="Enter your message" rows="5"
+            required></textarea>
+        </div>
+        <button type="submit" class="footer__form-button button--white button--100">SUBMIT NOW</button>
+      </form>
+    </div>
+  </div>
+  <div class="footer__copyright">© Mifort 2023 - All rights reserved</div>
+</footer>

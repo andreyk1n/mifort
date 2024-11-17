@@ -1,6 +1,7 @@
 @use 'variables' as *;
 @use 'mixins' as *;
 @use 'header';
+@use 'footer';
 
 
 // Підключення стилів аккордіону
@@ -20,12 +21,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-// temp
-
-p {
-    margin-top: 100px;
 }
 
 @font-face {
@@ -142,7 +137,37 @@ a:active {
 }
 
 .button:active {
-    background-color: $buttonActive;
+    opacity: .5;
+}
+
+.button--white {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    transition-duration: $transitionDuration;
+    color: #1377FE;
+    padding: $buttonPaddings;
+    border-radius: $buttonBorderRadius;
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    font-weight: 600;
+    font-family: "Poppins", serif;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.button--100 {
+    width: 100%;
+}
+
+.button--white:hover {
+    opacity: .5;
+}
+
+.button--white:active {
+    opacity: .5;
 }
 
 // Загальні стилі для списків
