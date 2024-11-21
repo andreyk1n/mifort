@@ -100,6 +100,13 @@ body {
     padding: 0 15px
 }
 
+.section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 // Застосування стилів для посилання: колір, час анімації, активний стан.
 a {
     color: $linkColor;
@@ -131,6 +138,11 @@ a:active {
     outline: 0;
     font-weight: 600;
     font-family: "Poppins", serif;
+}
+
+.button--big {
+    padding: 20px 40px;
+    font-size: 18px;
 }
 
 .button:hover {
