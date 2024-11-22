@@ -3,6 +3,7 @@
 @use 'header';
 @use 'footer';
 @use 'hero';
+@use 'partners';
 
 
 // Підключення стилів аккордіону
@@ -105,6 +106,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 40px 0;
+    @media (max-width: 992px) {
+        margin: 20px 0;
+    }
 }
 
 // Застосування стилів для посилання: колір, час анімації, активний стан.
