@@ -1,0 +1,127 @@
+@use 'variables' as *;
+
+.cards {
+    &__container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        &>p {
+            max-width: 830px;
+            text-align: center;
+        }
+    }
+
+    &__items {
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        @media (max-width: 768px) {
+         grid-template-columns: auto;   
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        padding: 40px 50px;
+        border: 1px solid #626262;
+        border-radius: 15px;
+        transition-duration: $transitionDuration;
+
+        svg {
+            color: #1377FE;
+        }
+
+        &:hover {
+            background-color: #1377FE;
+            border: 1px solid #1377FE;
+            color: #fff;
+
+            svg {
+                color: #fff;
+            }
+
+            span,
+            p {
+                color: #fff;
+            }
+        }
+
+        &:first-child {
+            background-color: #1377FE;
+            border: 1px solid #1377FE;
+            color: #fff;
+
+            svg {
+                color: #fff;
+            }
+
+            span,
+            p {
+                color: #fff;
+            }
+
+            &:hover {
+                background-color: #fff;
+                border: 1px solid #626262;
+                color: $fontColor;
+
+                svg {
+                    color: #1377FE;
+                }
+
+                span {
+                    color: #090707;
+                }
+            }
+        }
+
+        @media (max-width: 992px) {
+            align-items: flex-start;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        @media (max-width: 768px) {
+            align-items: center;
+            gap: 40px;
+            padding: 40px;
+        }
+
+        @media (max-width: 576px) {
+            flex-direction: column;
+            text-align: center;
+            gap: 20px;
+        }
+    }
+
+    &__icon {
+        width: 74px;
+        min-width: 74px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+
+        span {
+            display: block;
+            color: #090707;
+            font-size: 20px;
+            font-weight: 700;
+
+            @media (max-width: 992px) {
+                font-size: 18px;
+            }
+            
+        }
+    }
+}
