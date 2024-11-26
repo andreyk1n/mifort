@@ -6,9 +6,9 @@
 // ---------------------------------------------------------------------------------------------------------------
 
 // Підключення відстеження елементів для анімації. Інструкція знаходиться тут --> ./functions/elementWatcher.js
-// import { initializeElementWatcher } from './functions/elementWatcher.js';
+import { initializeElementWatcher } from './functions/elementWatcher.js';
 // Ініціалізація відстеження елементів для анімації.
-// initializeElementWatcher();
+initializeElementWatcher();
 
 // ---------------------------------------------------------------------------------------------------------------
 
