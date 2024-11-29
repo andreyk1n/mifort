@@ -1,4 +1,6 @@
 @use 'variables' as *;
+@use 'mixins' as *;
+
 
 .cards {
     &__container {
@@ -149,6 +151,73 @@
             font-size: 20px;
             font-weight: bold;
             color: #090707;
+        }
+    }
+
+    &__color {
+        h2, p {
+            align-items: flex-start;
+            text-align: left;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        &-items {
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+
+            @media (max-width: 992px) {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            @media (max-width: 576px) {
+                grid-template-columns: auto;
+            }
+        }
+
+        &-item {
+            border-radius: 16px;
+            padding: 35px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 20px;
+            span {
+                @include adaptiveValue('font-size', 24px, 18px);
+                font-weight: bold;
+                color: #fff;
+            }
+            p, a, span {
+                color: #fff;
+                text-decoration: none;
+                transition-duration: $transitionDuration;
+            }
+            a {
+                font-weight: 600;
+                display: flex;
+                align-items: center;
+                gap: 15px;
+
+                &:hover {
+                    color: #fff;
+                    text-decoration: underline;
+                    span {
+                        padding-left: 10px;
+                    }
+                }
+            }
+        }
+
+        &-red {
+            background-color: #FF8B7B;
+        }
+        &-blue {
+            background-color: #1377FE;
+        }
+        &-green {
+            background-color: #15AD9B;
         }
     }
 }
